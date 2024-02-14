@@ -1,0 +1,130 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.headers{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    
+}
+.logo{
+    padding: 17px 0px;
+    margin-left: 100px;
+}
+.navbar{
+    margin-right: 100px;
+}
+.navbar a {
+    text-decoration: none;
+    color: black;
+    margin-left: 30px;
+    font-size: large;
+}
+.navbar button{
+    cursor: pointer;
+    margin-left: 30px;
+    border: 5p;
+    width: 130px;
+    height: 42px;
+    font-size: large;
+    border-radius: 5px;
+}
+.button_sing{
+    background-color:white;
+    color: rgba(9, 160, 247, 1);
+    border-color: rgba(9, 160, 247, 1);
+}
+.button_login{
+    background-color:rgba(9, 160, 247, 1);
+    color: white;
+    border-color: rgba(9, 160, 247, 1) ;
+}
+.big_text{
+    margin-top: 50px;
+}
+.block_car{
+    background: url(picture/image\ 2.svg);
+    width: 100%;
+    height: 440px;
+    display: flex;
+    background-size: cover;
+    flex-direction: column;
+    padding-left:100px ;
+    color: white;
+    box-sizing: border-box;
+}
+.text_after_big_text{
+    font-size: 15;
+    margin-top: 30px;
+    margin-bottom: 30px ;
+}
+
+.block_car button{
+    width: 190px;
+    height: 40px;
+    background-color:rgba(9, 160, 247, 1);
+    color: white;
+    border-color: rgba(9, 160, 247, 1) ;
+    font-size: large;
+}
+.block_3{
+    width: 100%;
+    height: 125px;
+    background-color: rgba(46, 86, 110, 1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.buttons_left_block_3{
+    display: flex;
+    flex-direction: row;
+    padding-left:100px ;
+    align-items: center;
+}
+.buttons_left_block_3 button{    
+    text-align: left;
+    width: 190px;
+    height: 40px;
+    border-color:white ;
+    background-color: rgba(46, 86, 110, 1);
+    color: white;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: large;
+}
+
+.buttons_right_block_3{
+    padding-right: 100px;
+    margin-left: 56px;
+    
+}
+.buttons_right_block_3 button{
+    width: 130px;
+    height: 42px;
+    background-color:rgba(9, 160, 247, 1);
+    color: white;
+    border-color: rgba(9, 160, 247, 1) ;
+    font-size: large;
+    
+}
+.stick{
+    width: 1px;
+    height: 45px;
+    background-color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.buttons_right_block_3 input{
+    width: 350px;
+    margin-right: 50px;
+}
+.buttons_right_block_3 button{
+    margin-left: 50px;
+}
+
+
