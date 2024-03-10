@@ -43,11 +43,13 @@ body{
     color: white;
     border-color: rgba(9, 160, 247, 1) ;
 }
+
+
 .big_text{
     margin-top: 50px;
 }
 .block_car{
-    background: url(picture/image\ 2.svg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('picture/image\ 2.svg');
     width: 100%;
     height: 440px;
     display: flex;
@@ -55,14 +57,19 @@ body{
     flex-direction: column;
     padding-left:100px ;
     color: white;
-    box-sizing: border-box;
+    box-sizing: border-box;  
 }
 .text_after_big_text{
     font-size: 15;
     margin-top: 30px;
     margin-bottom: 30px ;
-}
+    text-shadow: 
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
 
+}
 .block_car button{
     width: 190px;
     height: 40px;
@@ -71,12 +78,43 @@ body{
     border-color: rgba(9, 160, 247, 1) ;
     font-size: large;
 }
+
+
+.search-sell{
+    font-size: 0px;
+    transform: translate(0,-40px);
+
+}
+.Search_button{
+    margin-left: 100px;
+    background-color: rgba(46, 86, 110, 1);
+    color: white;
+    width: 190px;
+    height: 40px;
+    border-top-color: rgba(9, 160, 247, 1);
+    border-right:none;
+    border-left: none;
+    border-bottom: none;
+    cursor: pointer;
+
+}
+.Sell_car{
+    background-color: rgba(23, 56, 77, 1);
+    color: white;
+    width: 190px;
+    height: 40px;
+    border:none;
+    transform: translate(0,-1px);
+    cursor: pointer;
+}
 .block_3{
+    transform: translate(0,-1px);
     width: 100%;
     height: 125px;
     background-color: rgba(46, 86, 110, 1);
     box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     align-items: center;
 }
@@ -86,7 +124,8 @@ body{
     padding-left:100px ;
     align-items: center;
 }
-.buttons_left_block_3 button{    
+.buttons_left_block_3 button{  
+    cursor: pointer;  
     text-align: left;
     width: 190px;
     height: 40px;
@@ -97,19 +136,27 @@ body{
     margin-bottom: 40px;
     font-size: large;
 }
-
 .buttons_right_block_3{
-    padding-right: 100px;
-    margin-left: 56px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     
 }
 .buttons_right_block_3 button{
-    width: 130px;
+    cursor: pointer;
+    width: 140px;
     height: 42px;
     background-color:rgba(9, 160, 247, 1);
     color: white;
     border-color: rgba(9, 160, 247, 1) ;
     font-size: large;
+    margin-right: 100px;
+    margin-left: 55px;
+
+}
+.buttons_right_block_3 input{
+    cursor: pointer;
+    width: 400px;
     
 }
 .stick{
@@ -119,12 +166,337 @@ body{
     margin-left: 20px;
     margin-right: 20px;
 }
-.buttons_right_block_3 input{
-    width: 350px;
-    margin-right: 50px;
+/* редакция полосы */
+.range{
+    -webkit-appearance: none;
+    width: 20px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.6);
+    border: 5px;
+    border-radius: 5px;
+    background-size:100%;
+    background-repeat: no-repeat;
 }
-.buttons_right_block_3 button{
-    margin-left: 50px;
+/* редакция ползунка */
+.range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 10px;
+    background: #f8f8f8;
+    cursor: ew-resize;
+    box-shadow: 0px 0 2px 0 #0e0202;
 }
 
 
+.FEATURED_CAR_DEALS{
+    align-items: center;
+    text-align:center;
+    width: 100%;
+    align-self: center; 
+    display: flex;
+    flex-direction: column;
+}    
+.FEATURED_CAR_DEALS h1{
+    color: rgba(46, 86, 110, 1);
+    font-size:35px;
+}
+.FEATURED_CAR_DEALS h2{
+    font-size: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    color: rgba(207, 214, 217, 1);
+}
+.row_stick{
+    width: 81px;
+    height: 4px;
+    background-color: rgba(9, 160, 247, 1);
+}
+
+.row_car_picture{
+    width: 100%;
+    color: white;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+}
+.row_car_picture h1{
+    margin: 0px;
+}
+.row_car_picture h3{
+    margin-top:15px;
+    margin-bottom: 15px;
+}
+.BMW{
+    display: flex;
+    width: 28%;
+    flex-direction: column;
+    background-color: rgba(35, 37, 38, 1);
+    height: 350px;
+}
+.most_sell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    padding: 11px 31px;
+
+}
+.most_sell_green{
+    background-color: rgba(11, 200, 120, 1);
+}
+.most_sell_red{
+    background-color:rgba(255, 100, 108, 1);
+}
+.most_sell_dark{
+    background-color:rgba(45, 77, 65, 1);
+}
+
+.BMW_character{
+    margin-left: 15px;
+    margin-top:26px ;
+}
+.BMW_character span{
+    color: rgba(207, 214, 217, 1);
+}
+.BMW img{
+    margin-top: 50px;
+    width: 100%;
+}
+.row_car_picture button{
+    padding:15px ;
+    background-color: rgba(9, 160, 247, 1);
+    border: none;
+    color: white;
+    
+}
+.space_car{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.navbar_2{
+    margin-left: 100px;
+}
+.OUR_CAR{
+    margin-top:200px;
+    margin-right: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.OUR_CAR h1{
+    margin: 0px;
+}
+.button_for_navbar_2{
+    margin-top: 37px;
+    display: flex;
+    flex-direction: row;
+}
+.button_for_navbar_2 button{
+    cursor: pointer;
+    margin-right: 15px;
+    border: white;
+    width: 80px;
+    height: 40px;
+}
+.blue_button{
+    border-radius: 30px;
+    background-color: rgba(9, 160, 247, 1);
+    color: white;
+}
+.white_button{
+    background-color: white;
+}
+.serch_by_name{
+    width: 300px;
+    height: 45px;
+    border: none;
+    font-size: 20px;
+}
+.search_button_with_name{
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    background-color: rgba(9, 160, 247, 1);
+    color: white;
+    border: none;
+}
+
+.form_search form{
+    background-color: rgba(245, 247, 249, 1);
+}
+.form_search input{
+    background-color: rgba(245, 247, 249, 1);
+}
+.form_search{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+}
+.form_search img{
+    transform: translate(0,4px);
+}
+
+.grid-container{
+    display: grid;
+    width: 100%;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns:33% 33% 33%;
+}
+.grid-container h3{
+    color: rgba(9, 160, 247, 1);
+}
+.grid-item{
+    height: 444px;
+    border-radius:20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 110px;
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}
+.grid-item img{
+    height: 184px;
+}
+.info_grid_item{
+    background-color: white;
+    border-radius: 20px;
+    transform: translate(0,-20px);
+}
+.grey{
+    color: rgba(111, 111, 111, 1);
+}
+
+.GGZN{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.GGZN h5{
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+}
+.GGZN img{
+    width: 20px;
+    height: 20px;
+}
+.GG{
+    display: flex;
+    flex-direction: column;
+}
+.row_style{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    
+}
+.grid-item hr{
+    height: 1px;
+    margin-top: 15px;
+    color: red;
+    width: 100%;
+    border: 1px solid rgba(217, 217, 217, 1);
+}
+.grid-item span{
+    margin-left: 5px;
+}
+.evaluate{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.evaluate button{
+    margin-top: 10px;
+    color: white;
+    background-color: rgba(9, 160, 247, 1);
+    border: none;
+    height: 40px;
+    width: 160px;
+    
+}
+
+.number_of_site{
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.number_of_site button{
+    height: 32px;
+    width: 32px;
+    background-color: white;
+    border-color: rgba(223, 227, 232, 1);
+    border-radius: 10px;
+}
+
+.end-box{
+    width: 100%;
+    height: 160px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20px;
+    align-items: center;
+    text-decoration: none;
+}
+.end-box a{
+    font-size: 19px;
+    font-weight: 900;
+    text-decoration: none;
+    cursor: pointer;
+}
+.end-box img{
+    margin-left: 100px;
+}
+
+.center-text_end-box_space-home{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+.end-box_reg-log{
+    display: flex;
+    flex-direction: column;
+    margin-right: 100px;
+}
+.end-box_reg-log button{
+    margin-bottom: 15px;
+    cursor: pointer;
+    height: 40px;
+    width: 130px;
+    border-radius: 10px;
+    
+}
+.color_blue_botton{
+    background-color: rgba(24, 160, 251, 1);
+    border: none;
+    color: white;
+    
+}
+.color_white_botton{
+    background-color: white;
+    border-color: rgba(24, 160, 251, 1);
+    color: rgba(24, 160, 251, 1);
+}
+.center-text_end-box-column{
+    display: flex;
+    flex-direction: column;
+}
+.love-users{
+    display: flex;
+    justify-content: center;
+}
