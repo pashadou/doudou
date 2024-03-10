@@ -1,16 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --blue: rgba(9, 160, 247, 1);
+
+}
+
 body{
     margin: 0;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Roboto", sans-serif;
 }
-.headers{
+
+
+/***************************** HOME *****************************/
+
+.headers {
     display: flex;
     width: 100%;
     background-color: white;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
-    
 }
+
 .logo{
     padding: 17px 0px;
     margin-left: 100px;
@@ -20,34 +31,48 @@ body{
 }
 .navbar a {
     text-decoration: none;
-    color: black;
+    color: #025049;
     margin-left: 30px;
     font-size: large;
+    font-weight: 400;
 }
 .navbar button{
     cursor: pointer;
     margin-left: 30px;
-    border: 5p;
+    border: 1px solid;
     width: 130px;
     height: 42px;
     font-size: large;
     border-radius: 5px;
 }
-.button_sing{
-    background-color:white;
-    color: rgba(9, 160, 247, 1);
-    border-color: rgba(9, 160, 247, 1);
-}
+
 .button_login{
-    background-color:rgba(9, 160, 247, 1);
+    background-color: var(--blue);
     color: white;
-    border-color: rgba(9, 160, 247, 1) ;
+    border-color: var(--blue) ;
+}
+
+.button_login:hover {
+    transition: 0.3s all;
+    background-color:white  ;
+    color: var(--blue);
+    border-color: var(--blue) ;
+}
+
+.button_sign_up{
+    background-color:white;
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.button_sign_up:hover {
+    transition: 0.3s all;
+    background-color:var(--blue);
+    color: white;
+    border-color: white;
 }
 
 
-.big_text{
-    margin-top: 50px;
-}
 .block_car{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('picture/image\ 2.svg');
     width: 100%;
@@ -57,48 +82,57 @@ body{
     flex-direction: column;
     padding-left:100px ;
     color: white;
-    box-sizing: border-box;  
+    box-sizing: border-box;
 }
-.text_after_big_text{
-    font-size: 15;
+
+.block_car h1{
+    margin-top: 50px;
+}
+
+.block_car h5{
+    font-size: 15px;
     margin-top: 30px;
-    margin-bottom: 30px ;
-    text-shadow: 
-        -1px -1px 0 #000,  
+    margin-bottom: 30px;
+    text-shadow:
+        -1px -1px 0 #000,
         1px -1px 0 #000,
         -1px 1px 0 #000,
         1px 1px 0 #000;
-
 }
+
 .block_car button{
     width: 190px;
     height: 40px;
-    background-color:rgba(9, 160, 247, 1);
+    background-color:var(--blue);
     color: white;
-    border-color: rgba(9, 160, 247, 1) ;
     font-size: large;
+    border: 1px solid var(--blue);
+    cursor: pointer;
 }
 
 
-.search-sell{
+/***************************** SEARCH *****************************/
+
+.search{
     font-size: 0px;
     transform: translate(0,-40px);
 
 }
-.Search_button{
+
+.search .btn_primary{
     margin-left: 100px;
     background-color: rgba(46, 86, 110, 1);
     color: white;
     width: 190px;
     height: 40px;
-    border-top-color: rgba(9, 160, 247, 1);
+    border-top-color: var(--blue);
     border-right:none;
     border-left: none;
     border-bottom: none;
     cursor: pointer;
 
 }
-.Sell_car{
+.search .btn_secondary{
     background-color: rgba(23, 56, 77, 1);
     color: white;
     width: 190px;
@@ -107,7 +141,7 @@ body{
     transform: translate(0,-1px);
     cursor: pointer;
 }
-.block_3{
+.search .container{
     transform: translate(0,-1px);
     width: 100%;
     height: 125px;
@@ -118,46 +152,46 @@ body{
     flex-direction: row;
     align-items: center;
 }
-.buttons_left_block_3{
+.search .container .elt_1{
     display: flex;
     flex-direction: row;
     padding-left:100px ;
     align-items: center;
 }
-.buttons_left_block_3 button{  
-    cursor: pointer;  
+
+.search .container .elt_1 button{
+    cursor: pointer;
     text-align: left;
     width: 190px;
     height: 40px;
-    border-color:white ;
     background-color: rgba(46, 86, 110, 1);
     color: white;
     margin-top: 40px;
     margin-bottom: 40px;
     font-size: large;
+    border: 1px solid white;
 }
-.buttons_right_block_3{
+.search .container .elt_2{
     display: flex;
     flex-direction: row;
     align-items: center;
-    
+
 }
-.buttons_right_block_3 button{
+.search .container .elt_2 button{
     cursor: pointer;
     width: 140px;
     height: 42px;
-    background-color:rgba(9, 160, 247, 1);
+    background-color:var(--blue);
     color: white;
-    border-color: rgba(9, 160, 247, 1) ;
     font-size: large;
     margin-right: 100px;
     margin-left: 55px;
-
+    border: 1px solid var(--blue);
 }
-.buttons_right_block_3 input{
+.search .container .elt_2 input{
     cursor: pointer;
     width: 400px;
-    
+
 }
 .stick{
     width: 1px;
@@ -187,47 +221,58 @@ body{
     box-shadow: 0px 0 2px 0 #0e0202;
 }
 
+/***************************** DEAL *****************************/
 
-.FEATURED_CAR_DEALS{
+.deal header{
     align-items: center;
     text-align:center;
     width: 100%;
-    align-self: center; 
+    align-self: center;
     display: flex;
     flex-direction: column;
-}    
-.FEATURED_CAR_DEALS h1{
+}
+.deal header h1{
     color: rgba(46, 86, 110, 1);
     font-size:35px;
 }
-.FEATURED_CAR_DEALS h2{
+.deal header h2{
     font-size: 20px;
     margin-top: 15px;
     margin-bottom: 15px;
     color: rgba(207, 214, 217, 1);
 }
+
 .row_stick{
     width: 81px;
     height: 4px;
-    background-color: rgba(9, 160, 247, 1);
+    background-color: var(--blue);
 }
 
-.row_car_picture{
+.deal .container{
     width: 100%;
     color: white;
     margin-top: 36px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     justify-content: center;
 }
-.row_car_picture h1{
+.deal .container h1{
     margin: 0px;
 }
-.row_car_picture h3{
+.deal .container h3{
     margin-top:15px;
     margin-bottom: 15px;
 }
-.BMW{
+
+.deal .container button{
+    padding:15px ;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.deal .container .item{
     display: flex;
     width: 28%;
     flex-direction: column;
@@ -252,33 +297,31 @@ body{
     background-color:rgba(45, 77, 65, 1);
 }
 
-.BMW_character{
+.deal .container .item .properties{
     margin-left: 15px;
     margin-top:26px ;
 }
-.BMW_character span{
+.deal .container .item .properties span{
     color: rgba(207, 214, 217, 1);
 }
-.BMW img{
-    margin-top: 50px;
+.deal .container .item img{
     width: 100%;
+    max-width: 400px;
+    margin: 50px auto 0px auto;
 }
-.row_car_picture button{
-    padding:15px ;
-    background-color: rgba(9, 160, 247, 1);
-    border: none;
-    color: white;
-    
-}
+
 .space_car{
     margin-left: 25px;
     margin-right: 25px;
 }
 
-.navbar_2{
+/***************************** SHOP *****************************/
+
+.shop header{
     margin-left: 100px;
 }
-.OUR_CAR{
+
+.shop header nav{
     margin-top:200px;
     margin-right: 100px;
     display: flex;
@@ -286,15 +329,15 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.OUR_CAR h1{
+.shop header nav h1{
     margin: 0px;
 }
-.button_for_navbar_2{
+.shop .navigation{
     margin-top: 37px;
     display: flex;
     flex-direction: row;
 }
-.button_for_navbar_2 button{
+.shop .navigation button{
     cursor: pointer;
     margin-right: 15px;
     border: white;
@@ -303,42 +346,36 @@ body{
 }
 .blue_button{
     border-radius: 30px;
-    background-color: rgba(9, 160, 247, 1);
+    background-color: var(--blue);
     color: white;
 }
 .white_button{
     background-color: white;
 }
-.serch_by_name{
-    width: 300px;
-    height: 45px;
-    border: none;
-    font-size: 20px;
-}
-.search_button_with_name{
-    width: 100px;
-    height: 45px;
-    font-size: 20px;
-    background-color: rgba(9, 160, 247, 1);
-    color: white;
-    border: none;
-}
 
-.form_search form{
-    background-color: rgba(245, 247, 249, 1);
-}
-.form_search input{
-    background-color: rgba(245, 247, 249, 1);
-}
 .form_search{
+    background-color: rgba(245, 247, 249, 1);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
+    padding-left: 15px;
 }
-.form_search img{
-    transform: translate(0,4px);
+
+.form_search input{
+    width: 300px;
+    height: 45px;
+    border: none;
+    font-size: 20px;
+    background-color: rgba(245, 247, 249, 1);
+}
+.form_search button{
+    width: 100px;
+    height: 45px;
+    font-size: 20px;
+    background-color: var(--blue);
+    color: white;
+    border: none;
 }
 
 .grid-container{
@@ -350,22 +387,26 @@ body{
     grid-template-columns:33% 33% 33%;
 }
 .grid-container h3{
-    color: rgba(9, 160, 247, 1);
+    color: var(--blue);
 }
-.grid-item{
-    height: 444px;
-    border-radius:20px;
+.grid_item{
+    box-shadow: -1px 2px 15px -6px rgba(0,0,0,0.75);
+    max-width: 400px;
+    border-top-left-radius:20px;
+    border-top-right-radius:20px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 110px;
+    margin-bottom: 50px;
     margin-left: 100px;
     margin-right: 100px;
-    
+
 }
-.grid-item img{
-    height: 184px;
+
+.grid_item img{
+
 }
 .info_grid_item{
+    padding-left: 10px;
     background-color: white;
     border-radius: 20px;
     transform: translate(0,-20px);
@@ -374,61 +415,64 @@ body{
     color: rgba(111, 111, 111, 1);
 }
 
-.GGZN{
+.icon{
+    padding: 0px 10px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
 }
-.GGZN h5{
+
+.icon hr {
+
+}
+.icon h5{
     margin: 0;
     align-items: center;
     justify-content: center;
     margin-left: 5px;
 }
-.GGZN img{
+.icon img{
     width: 20px;
     height: 20px;
 }
-.GG{
-    display: flex;
-    flex-direction: column;
-}
+
 .row_style{
     margin-top: 10px;
     display: flex;
     flex-direction: row;
-    
+
 }
-.grid-item hr{
+.grid_item hr{
     height: 1px;
     margin-top: 15px;
-    color: red;
     width: 100%;
     border: 1px solid rgba(217, 217, 217, 1);
+    background-color: rgba(217, 217, 217, 1);
 }
-.grid-item span{
+.grid_item span{
     margin-left: 5px;
 }
-.evaluate{
+.review{
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: start;
 }
 
-.evaluate button{
+.review button{
     margin-top: 10px;
     color: white;
-    background-color: rgba(9, 160, 247, 1);
+    background-color: var(--blue);
     border: none;
     height: 40px;
     width: 160px;
-    
+    cursor: pointer;
+    margin-bottom: 20px;
 }
 
-.number_of_site{
+.pagination{
     width: 100%;
     margin-top: 50px;
     display: flex;
@@ -436,13 +480,25 @@ body{
     align-items: center;
     justify-content: center;
 }
-.number_of_site button{
+.pagination .prev {
+    background-color: #919EAB;
+}
+.pagination button{
     height: 32px;
     width: 32px;
     background-color: white;
-    border-color: rgba(223, 227, 232, 1);
     border-radius: 10px;
+    border: 1px solid #DFE3E8;
+    margin: 0px 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
+/***************************** FOOTER *****************************/
+
 
 .end-box{
     width: 100%;
@@ -459,6 +515,7 @@ body{
     font-weight: 900;
     text-decoration: none;
     cursor: pointer;
+    color: black;
 }
 .end-box img{
     margin-left: 100px;
@@ -479,18 +536,18 @@ body{
     height: 40px;
     width: 130px;
     border-radius: 10px;
-    
+
 }
-.color_blue_botton{
+.color_blue_button{
     background-color: rgba(24, 160, 251, 1);
-    border: none;
     color: white;
-    
+    border: 1px solid;
+
 }
-.color_white_botton{
+.color_white_button{
     background-color: white;
-    border-color: rgba(24, 160, 251, 1);
     color: rgba(24, 160, 251, 1);
+    border: 1px solid;
 }
 .center-text_end-box-column{
     display: flex;
